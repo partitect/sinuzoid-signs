@@ -1,43 +1,82 @@
-Sine Dalga Oluşturucu
+# Sinüsoidal Sinyali Üretme Uygulaması
 
-Bu Flask web uygulaması, belirli bir frekans ve genlik ile veya belirli
-bir değer aralığında sinüs dalgaları oluşturmanıza olanak tanır.
+Bu proje, kullanıcı girdilerine dayalı sinüsoidal sinyalleri oluşturmayı ve göstermeyi amaçlayan bir Flask web uygulamasını içerir. Bu projeyi başlatmak için aşağıdaki adımları izleyin:
 
-Kurulum Gerekli bağımlılıkları yükleyin: pip install flask matplotlib
-numpy Projeniz için yeni bir dizin oluşturun ve içine gidin: mkdir
-sine-wave-generator cd sine-wave-generator app.py adlı yeni bir dosya
-oluşturun ve orijinal istemde sağlanan kodu içine yapıştırın.
+## Proje Kurulumu
 
-static adlı yeni bir dizin oluşturun ve index.html, frekans.html,
-arrange.html, resultfreqency.html ve resultarrange.html dosyalarını
-içine kopyalayın.
+1. **Proje Dizinini Oluşturun:**
 
-Kullanım Flask geliştirme sunucusunu başlatmak için aşağıdaki komutu
-çalıştırın:
+   - Python'un sistemde yüklü olduğundan emin olun. Yüklü değilse resmi Python web sitesinden indirip kurun.
 
-flask run Ardından web tarayıcınızı açın ve http://localhost:5000/
-adresine gidin.
+   - Bir proje dizini oluşturun ve komut satırı terminalinizde bu dizine gidin.
 
-Belirli bir frekans ve genlik ile bir sinüs dalgası oluşturmak için,
-"Frekans" sekmesine tıklayın ve ilgili alanlara istediğiniz değerleri
-girin. Ardından "Generate" düğmesine tıklayın.
+   - Proje dizini içinde, proje bağımlılıklarını izole etmek için bir sanal ortam (virtual environment) oluşturun:
 
-Belirli bir değer aralığında bir sinüs dalgası oluşturmak için,
-"Arrange" sekmesine tıklayın ve aralıktaki başlangıç ve bitiş
-değerlerini ilgili alanlara girin. Ardından "Generate" düğmesine
-tıklayın.
+     ```
+     python -m venv venv
+     ```
 
-Oluşturulan sinüs dalgası, ilgili sayfada bir grafik olarak
-görüntülenecektir. Ayrıca, "Save" düğmesine tıklayarak grafiği
-bilgisayarınıza kaydedebilirsiniz.
+   - Sanal ortamı etkinleştirin:
 
-Örnekler Sine dalga oluşturucuyu nasıl kullanacağınıza dair bazı
-örnekler:
+     - Windows için:
 
-1 Hz frekans ve 2 genlik ile bir sinüs dalgası oluşturmak için,
-"Frekans" sekmesine tıklayın ve "Frekans" alanına 1 ve "Genişlik"
-alanına 2 girin. Ardından "Generate" düğmesine tıklayın. 0 ile 10
-arasındaki değer aralığında bir sinüs dalgası oluşturmak için, "Arrange"
-sekmesine tıklayın ve "x1" alanına 0 ve "x2" alanına 10 girin. Ardından
-"Generate" düğmesine tıklayın. Farklı sinüs dalgaları oluşturmak için
-farklı değerlerle denemeler yapabilirsiniz.
+       ```
+       venv\Scripts\activate
+       ```
+
+     - macOS ve Linux için:
+
+       ```
+       source venv/bin/activate
+       ```
+
+2. **Gerekli Kütüphaneleri Yükleyin:**
+
+   - Sanal ortam etkinleştirildiğinde, "requirements.txt" dosyasındaki gereken kütüphaneleri aşağıdaki komutla yükleyin:
+
+     ```
+     pip install -r requirements.txt
+     ```
+
+## Proje Yapısı
+
+- Projelerinizi ve klasörlerinizi aşağıdaki gibi düzenleyin:
+
+     ```
+     your_project/
+     ├── app.py
+     ├── static/
+     │   ├── sinuzoid-frequency.png
+     │   └── sinuzoid-arrange.png
+     ├── templates/
+     │   ├── index.html
+     │   ├── frekans.html
+     │   ├── arrange.html
+     │   ├── resultfreqency.html
+     │   └── resultarrange.html
+     └── requirements.txt
+     ```
+
+- Web sayfalarınızı oluşturmak için HTML şablonlarına ihtiyacınız olacak. Flask yönlendirmeleriniz (`index`, `frekans`, `arrange`, `resultfreqency`, `resultarrange`) bu şablonları kullanarak web sayfalarını görüntüleyecek.
+
+## Uygulamayı Başlatma
+
+- Proje dizininde, Flask uygulamasını aşağıdaki komutla başlatın:
+
+```
+flask run
+```
+
+- Bu, Flask geliştirme sunucusunu başlatacak ve sunucunun çalıştığı URL'yi gösteren bir çıktı sağlayacaktır. Genellikle uygulamanızın erişilebilir olduğu bir URL sunacaktır, genellikle `http://127.0.0.1:5000/` gibi. Tarayıcınızda bu URL'yi açarak Flask web uygulamanıza erişebilirsiniz.
+
+## Uygulamayı Kullanma
+
+- Farklı yönlere (`/`, `/frekans`, `/arrange`) giderek web uygulamanızla etkileşimde bulunabilir ve sonuçları görebilirsiniz.
+
+## Uygulamayı Durdurma
+
+- Flask geliştirme sunucusunu durdurmak için terminalinizde `Ctrl+C` tuşlarına basabilirsiniz.
+
+Bu adımlar, Flask web uygulamanızla başlamanıza yardımcı olmalıdır. Projeyi özelleştirebilir ve gerektiğinde daha fazla özellik ekleyebilirsiniz. Herhangi bir sorunla karşılaşırsanız veya projenizle ilgili belirli sorularınız varsa, sormaktan çekinmeyin.
+
+Telat Kaya
