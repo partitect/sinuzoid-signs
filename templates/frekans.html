@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block title %} Sinüzoidal İşaret Çizdirme {%
+endblock %} {% block content %}
+<div class="ui middle aligned center aligned grid">
+  <div class="column form-column">
+    <h2 class="ui teal top attached header">
+      <div class="content">Sinüzoidal İşaret Çizdirme</div>
+    </h2>
+    <form
+      class="ui large attached form segment"
+      action="/resultfreqency"
+      method="post"
+    >
+      <div class="field">
+        <div class="ui left icon input">
+          <i class="wave square icon"></i>
+          <input placeholder="Frekans Girin" type="text" name="frekans" />
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui left icon input">
+          <i class="exchange alternate icon"></i>
+          <input placeholder="Genişlik Girin" type="text" name="genislik" />
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui left icon input">
+          <i class="sort numeric down icon"></i>
+          <input placeholder="Örnek Sayısı" type="text" name="ornek_sayisi" />
+        </div>
+      </div>
+
+      <button class="ui fluid large teal submit button" type="submit">
+        Sayısal İşareti Çiz
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

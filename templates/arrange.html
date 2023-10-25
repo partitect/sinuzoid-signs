@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block title %} Sinüzoidal İşaret Çizdirme {%
+endblock %} {% block content %}
+<div class="ui middle aligned center aligned grid">
+  <div class="column form-column">
+    <h2 class="ui teal top attached header">
+      <div class="content">Sinüzoidal Aralık Çizdirme</div>
+    </h2>
+    <form
+      class="ui large attached form segment"
+      action="/resultarrange"
+      method="post"
+    >
+      <div class="field">
+        <div class="ui left icon input">
+          <i class="subscript icon"></i>
+          <input placeholder="x1 Değerini Girin" type="text" name="x1" />
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui left icon input">
+          <i class="subscript icon"></i>
+          <input placeholder="x2 Değerini Girin" type="text" name="x2" />
+        </div>
+      </div>
+
+      <button class="ui fluid large teal submit button" type="submit">
+        Sayısal İşareti Çiz
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

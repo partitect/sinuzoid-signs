@@ -1,0 +1,10 @@
+body {
+  background-color: #dadada;
+}
+body > .grid {
+  height: 100%;
+}
+
+.column.form-column {
+  max-width: 500px;
+}
