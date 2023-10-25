@@ -1,68 +1,43 @@
-# Flask Signal Generator
+Sine Dalga Oluşturucu
 
-This is a Flask web application that generates and displays sinusoidal signals based on user input.
+Bu Flask web uygulaması, belirli bir frekans ve genlik ile veya belirli
+bir değer aralığında sinüs dalgaları oluşturmanıza olanak tanır.
 
-## Getting Started
+Kurulum Gerekli bağımlılıkları yükleyin: pip install flask matplotlib
+numpy Projeniz için yeni bir dizin oluşturun ve içine gidin: mkdir
+sine-wave-generator cd sine-wave-generator app.py adlı yeni bir dosya
+oluşturun ve orijinal istemde sağlanan kodu içine yapıştırın.
 
-These instructions will help you set up and run the project on your local machine.
+static adlı yeni bir dizin oluşturun ve index.html, frekans.html,
+arrange.html, resultfreqency.html ve resultarrange.html dosyalarını
+içine kopyalayın.
 
-### Prerequisites
+Kullanım Flask geliştirme sunucusunu başlatmak için aşağıdaki komutu
+çalıştırın:
 
-- Python (version 3.x) installed on your system.
-- pip (Python package manager) installed.
+flask run Ardından web tarayıcınızı açın ve http://localhost:5000/
+adresine gidin.
 
-### Installation
+Belirli bir frekans ve genlik ile bir sinüs dalgası oluşturmak için,
+"Frekans" sekmesine tıklayın ve ilgili alanlara istediğiniz değerleri
+girin. Ardından "Generate" düğmesine tıklayın.
 
-1. Clone the repository or download the project files to your local machine.
+Belirli bir değer aralığında bir sinüs dalgası oluşturmak için,
+"Arrange" sekmesine tıklayın ve aralıktaki başlangıç ve bitiş
+değerlerini ilgili alanlara girin. Ardından "Generate" düğmesine
+tıklayın.
 
-2. Create a virtual environment to isolate the project's dependencies. You can create a virtual environment using the following command:
+Oluşturulan sinüs dalgası, ilgili sayfada bir grafik olarak
+görüntülenecektir. Ayrıca, "Save" düğmesine tıklayarak grafiği
+bilgisayarınıza kaydedebilirsiniz.
 
-   ```shell
-   python -m venv venv
+Örnekler Sine dalga oluşturucuyu nasıl kullanacağınıza dair bazı
+örnekler:
 
-
-Activate the virtual environment:
-
-On Windows:
-
-
-venv\Scripts\activate
-On macOS and Linux:
-
-
-source venv/bin/activate
-Install the required libraries listed in the requirements.txt file using the following command:
-
-
-pip install -r requirements.txt
-Project Structure
-Organize your project files and directories as follows:
-
-arduino
-Copy code
-your_project/
-├── app.py
-├── static/
-│   ├── sinuzoid-frequency.png
-│   └── sinuzoid-arrange.png
-├── templates/
-│   ├── index.html
-│   ├── frekans.html
-│   ├── arrange.html
-│   ├── resultfreqency.html
-│   └── resultarrange.html
-└── requirements.txt
-Running the Application
-In your project directory, run the Flask application using the following command:
-
-flask run
-The Flask development server will start, and you'll see output indicating the server is running. Access the app in your web browser at the provided URL, typically something like http://127.0.0.1:5000/.
-
-Using the Application
-Navigate to the different routes (/, /frekans, /arrange) to interact with the web application and see the results.
-Stopping the Application
-To stop the Flask development server, press Ctrl+C in your terminal.
-Authors
-Telat Kaya
-License
-This project is licensed under the MIT - see the LICENSE.md file for details.
+1 Hz frekans ve 2 genlik ile bir sinüs dalgası oluşturmak için,
+"Frekans" sekmesine tıklayın ve "Frekans" alanına 1 ve "Genişlik"
+alanına 2 girin. Ardından "Generate" düğmesine tıklayın. 0 ile 10
+arasındaki değer aralığında bir sinüs dalgası oluşturmak için, "Arrange"
+sekmesine tıklayın ve "x1" alanına 0 ve "x2" alanına 10 girin. Ardından
+"Generate" düğmesine tıklayın. Farklı sinüs dalgaları oluşturmak için
+farklı değerlerle denemeler yapabilirsiniz.
