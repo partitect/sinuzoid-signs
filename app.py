@@ -24,23 +24,23 @@ def arrange():
 def resultfreqency():
     if request.method == 'POST':
         frekans = request.form.get("frekans")
-        genislik = request.form.get("genislik")
+        genlik = request.form.get("genlik")
         ornek_sayisi = request.form.get("ornek_sayisi")
 
-        if frekans is not None and genislik is not None and ornek_sayisi is not None:
+        if frekans is not None and genlik is not None and ornek_sayisi is not None:
             frekans = float(frekans)
-            genislik = float(genislik)
+            genlik = float(genlik)
             ornek_sayisi = int(ornek_sayisi)
 
             zaman = np.linspace(0, 1, ornek_sayisi)
-            sinuzoid = genislik * np.sin(2 * np.pi * frekans * zaman)
+            sinuzoid = genlik * np.sin(2 * np.pi * frekans * zaman)
 
-            plt.figure(figsize=(8, 4))
+            plt.figure(figsize=(8, 4), dpi=100)
             plt.plot(zaman, sinuzoid, lw=2)
             plt.title(
-                f"Sinüzoidal İşaret - Frekans: {frekans} Hz, Genişlik: {genislik}")
+                f"Sinüzoidal İşaret - Frekans: {frekans} Hz, Genlik: {genlik}")
             plt.xlabel("Zaman (saniye)")
-            plt.ylabel("Amplitude")
+            plt.ylabel("Genlik")
             plt.grid(True)
             plt.savefig("static/sinuzoid-frequency.png")
             plt.close()
